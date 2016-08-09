@@ -2,6 +2,9 @@ import re, os, sys, time, util
 
 svm_path=""
 tmpfile_path=""
+if util.get_setting('tmpfile_path'):
+        tmpfile_path=util.get_setting('tmpfile_path')
+
 
 firstN_plant = 100
 firstN_noplant = 60

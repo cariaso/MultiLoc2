@@ -1,6 +1,8 @@
 import re, os, sys, string, util
 
 tmpfile_path=""
+if util.get_setting('tmpfile_path'):
+        tmpfile_path=util.get_setting('tmpfile_path')
 
 def create_pattern_aac(sequence,klasse):
 	pattern = []

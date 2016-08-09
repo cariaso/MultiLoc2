@@ -1,6 +1,8 @@
 import re, os, sys, util
 
 tmpfile_path=""
+if util.get_setting('tmpfile_path'):
+        tmpfile_path=util.get_setting('tmpfile_path')
 
 def predict(origin,table,proteins,path,libsvm_path,model=12345, id=1):
 	model=str(model)

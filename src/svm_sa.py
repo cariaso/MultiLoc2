@@ -1,6 +1,8 @@
 import re, os, sys, util
 
 tmpfile_path=""
+if util.get_setting('tmpfile_path'):
+        tmpfile_path=util.get_setting('tmpfile_path')
 svm_path=""
 firstN = 100
 window_size = 20

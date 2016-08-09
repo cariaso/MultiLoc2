@@ -3,7 +3,22 @@ Update Aug 2016:
 http://abi.inf.uni-tuebingen.de/Services/MultiLoc2/multiloc2_download
 indicates this was released under GPL.
 
-I want to add some code so that the tmpfile_path can be controlled by a config file, instead of by running sed on python source files.
+I want to add some code so that the tmpfile_path can be controlled by
+a config file, instead of by running sed on python source files. This
+makes is easier to run multiple instances at the same time.
+
+default behavior is unchanged. ie running
+python configureML2.py
+still edits the python source files with sed.
+However if the file 'multiloc2.ini' is found in the current directory
+or the environment variable MULTILOC2_INI exists and points to a file
+then that file will be used to override tmpfile_path.
+
+The format of the file should be:
+
+[multiloc2]
+tmpfile_path=/path/to/new/tmpdir
+
 
 
 

@@ -302,3 +302,14 @@ def predict_one_vs_one(table,origin,model,path,libsvm_path,tmpfile_path,id,prote
 	os.remove("%stest_svm.dat" % file_path)
 	
 	return ergebnis
+
+def get_setting(key):
+        env_key_name = 'MULTILOC2_INI'
+        ini_fn = os.environ.get(env_key_name, 'multiloc2.ini')
+        if os.path.exists(ini_fn):
+                from ConfigParser import SafeConfigParser
+                parser = SafeConfigParser()
+                parser.read(ini_fn)
+                val = parser.get('multiloc2', key)
+                return val
+        return None

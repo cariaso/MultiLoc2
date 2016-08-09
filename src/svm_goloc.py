@@ -2,6 +2,8 @@ import re,sys,os,string, time, util
 
 svm_path=""
 tmpfile_path=""
+if util.get_setting('tmpfile_path'):
+        tmpfile_path=util.get_setting('tmpfile_path')
 
 all_animal_go_terms = []
 all_fungi_go_terms = []
