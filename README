@@ -5,7 +5,7 @@ indicates this was released under GPL.
 
 I want to add some code so that the tmpfile_path can be controlled by
 a config file, instead of by running sed on python source files. This
-makes is easier to run multiple instances at the same time.
+makes it easier to run multiple instances at the same time.
 
 default behavior is unchanged. ie running
 python configureML2.py
